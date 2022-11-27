@@ -1,0 +1,6 @@
+each sample's date_created and date_removed have the exact same value and that persists for all samples, there might be issues with timestamping.
+"street_address" field can be removed because it is redundant when there are 2 derived fields "street" and "address_number" in place. Additionally, the 2 drived fields can provide higher flexibility for analytics.
+the table sorted by e.g. date_created might be useful to ease the work of BI and visualization. Otherwise, the issue does not affect much to machine learning models.
+Some dummy variables or onehotcode can be used to transform string or categorical data into numeric data which is most likely required for most machine learning algorithms, if needed.
+If the dataset is to be indexed to database server, different ways of dividing the dataset into tables with primary keys can be used. Also the dataset can be partitioned horizontally, such as partitioning based on building_type, neighbor regions and/or rent.
+From my point of view, I do not see any significant problems to the dataset, it can be used instantly with no issue. There are just plenty ways to optimize and improve it.
